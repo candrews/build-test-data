@@ -34,7 +34,7 @@ import java.lang.reflect.Modifier
  * Since @Build necessarily includes additional classes in the graph (even if those classes are
  * not used by the test), it may perform worse than @Mock for complex object graphs.
  */
-class BuildTestDataUnitTestMixin extends DomainClassUnitTestMixin {
+class BuildTestDataUnitTestMixin extends WorkaroundDomainClassUnitTestMixin {
     static Map<String, List<GrailsDomainClass>> subClassCache = [:]
     static {
         TestDataConfigurationHolder.loadTestDataConfig()
